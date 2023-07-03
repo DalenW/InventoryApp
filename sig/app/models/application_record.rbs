@@ -1,0 +1,19 @@
+class ApplicationRecord
+
+  @audit_model_action: Symbol
+  @audit_model_changed_columns: Array[string]
+
+  def self.audit?: -> bool
+
+  def audit?: -> bool
+
+  def audit_model_changed: -> Array[string]
+
+  def audit_model_commit: -> void
+
+  def audit_model_create: -> void
+
+  def audit_model_destroyed: -> void
+
+  def hidden_columns: -> Array[Symbol]
+end

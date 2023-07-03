@@ -721,9 +721,97 @@ class User < ::ApplicationRecord
     def restore_updated_at!: () -> void
 
     def clear_updated_at_change: () -> void
+
+    def created_by_id: () -> Integer
+
+    def created_by_id=: (Integer) -> Integer
+
+    def created_by_id?: () -> bool
+
+    def created_by_id_changed?: () -> bool
+
+    def created_by_id_change: () -> [ Integer?, Integer? ]
+
+    def created_by_id_will_change!: () -> void
+
+    def created_by_id_was: () -> Integer?
+
+    def created_by_id_previously_changed?: () -> bool
+
+    def created_by_id_previous_change: () -> Array[Integer?]?
+
+    def created_by_id_previously_was: () -> Integer?
+
+    def created_by_id_before_last_save: () -> Integer?
+
+    def created_by_id_change_to_be_saved: () -> Array[Integer?]?
+
+    def created_by_id_in_database: () -> Integer?
+
+    def saved_change_to_created_by_id: () -> Array[Integer?]?
+
+    def saved_change_to_created_by_id?: () -> bool
+
+    def will_save_change_to_created_by_id?: () -> bool
+
+    def restore_created_by_id!: () -> void
+
+    def clear_created_by_id_change: () -> void
+
+    def updated_by_id: () -> Integer
+
+    def updated_by_id=: (Integer) -> Integer
+
+    def updated_by_id?: () -> bool
+
+    def updated_by_id_changed?: () -> bool
+
+    def updated_by_id_change: () -> [ Integer?, Integer? ]
+
+    def updated_by_id_will_change!: () -> void
+
+    def updated_by_id_was: () -> Integer?
+
+    def updated_by_id_previously_changed?: () -> bool
+
+    def updated_by_id_previous_change: () -> Array[Integer?]?
+
+    def updated_by_id_previously_was: () -> Integer?
+
+    def updated_by_id_before_last_save: () -> Integer?
+
+    def updated_by_id_change_to_be_saved: () -> Array[Integer?]?
+
+    def updated_by_id_in_database: () -> Integer?
+
+    def saved_change_to_updated_by_id: () -> Array[Integer?]?
+
+    def saved_change_to_updated_by_id?: () -> bool
+
+    def will_save_change_to_updated_by_id?: () -> bool
+
+    def restore_updated_by_id!: () -> void
+
+    def clear_updated_by_id_change: () -> void
   end
   include GeneratedAttributeMethods
+  def audit_models: () -> AuditModel::ActiveRecord_Associations_CollectionProxy
+  def audit_models=: (AuditModel::ActiveRecord_Associations_CollectionProxy | Array[AuditModel]) -> (AuditModel::ActiveRecord_Associations_CollectionProxy | Array[AuditModel])
+  def audit_model_ids: () -> Array[Integer]
+  def audit_model_ids=: (Array[Integer]) -> Array[Integer]
 
+  def created_by: () -> User
+  def created_by=: (User?) -> User?
+  def reload_created_by: () -> User?
+  def build_created_by: (untyped) -> User
+  def create_created_by: (untyped) -> User
+  def create_created_by!: (untyped) -> User
+  def updated_by: () -> User
+  def updated_by=: (User?) -> User?
+  def reload_updated_by: () -> User?
+  def build_updated_by: (untyped) -> User
+  def create_updated_by: (untyped) -> User
+  def create_updated_by!: (untyped) -> User
   module GeneratedAssociationMethods
   end
   include GeneratedAssociationMethods

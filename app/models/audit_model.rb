@@ -41,4 +41,9 @@ class AuditModel < ApplicationRecord
   def previous
     record_was
   end
+
+  # we're not going to audit the audit table
+  def self.audit?
+    false
+  end
 end

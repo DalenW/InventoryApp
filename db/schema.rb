@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_03_012828) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_03_020527) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "timescaledb"
 
   create_table "audit_models", id: false, force: :cascade do |t|
-    t.string "auditable_type", null: false
+    t.text "auditable_type", null: false
     t.bigint "auditable_id", null: false
     t.timestamptz "audit_timestamp", null: false
     t.text "audit_column", null: false
@@ -24,6 +24,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_03_012828) do
     t.integer "action", limit: 2, null: false
     t.integer "severity", limit: 2, null: false
     t.bigint "user_id", null: false
+    t.index ["audit_timestamp"], name: "audit_models_audit_timestamp_idx", order: :desc
     t.index ["auditable_type", "auditable_id", "audit_timestamp", "audit_column"], name: "index_audit_models_on_auditable_and_timestamp_and_column", unique: true
     t.index ["user_id"], name: "index_audit_models_on_user_id"
   end
@@ -48,11 +49,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_03_012828) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "created_by_id", null: false
+    t.bigint "updated_by_id", null: false
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
+    t.index ["created_by_id"], name: "index_users_on_created_by_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
+    t.index ["updated_by_id"], name: "index_users_on_updated_by_id"
   end
 
   add_foreign_key "audit_models", "users"
+  add_foreign_key "users", "users", column: "created_by_id"
+  add_foreign_key "users", "users", column: "updated_by_id"
 end

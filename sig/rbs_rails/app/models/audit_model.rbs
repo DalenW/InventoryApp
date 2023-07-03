@@ -292,6 +292,18 @@ class AuditModel < ::ApplicationRecord
   end
   include GeneratedAttributeMethods
 
+  def created_by: () -> User
+  def created_by=: (User?) -> User?
+  def reload_created_by: () -> User?
+  def build_created_by: (untyped) -> User
+  def create_created_by: (untyped) -> User
+  def create_created_by!: (untyped) -> User
+  def updated_by: () -> User
+  def updated_by=: (User?) -> User?
+  def reload_updated_by: () -> User?
+  def build_updated_by: (untyped) -> User
+  def create_updated_by: (untyped) -> User
+  def create_updated_by!: (untyped) -> User
   def auditable: () -> untyped
   def auditable=: (untyped?) -> untyped?
   def reload_auditable: () -> untyped?
