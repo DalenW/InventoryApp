@@ -1,0 +1,252 @@
+class UserAction < ::ApplicationRecord
+  extend _ActiveRecord_Relation_ClassMethods[UserAction, ActiveRecord_Relation, top]
+
+  module GeneratedAttributeMethods
+    def user_id: () -> Integer
+
+    def user_id=: (Integer) -> Integer
+
+    def user_id?: () -> bool
+
+    def user_id_changed?: () -> bool
+
+    def user_id_change: () -> [ Integer?, Integer? ]
+
+    def user_id_will_change!: () -> void
+
+    def user_id_was: () -> Integer?
+
+    def user_id_previously_changed?: () -> bool
+
+    def user_id_previous_change: () -> Array[Integer?]?
+
+    def user_id_previously_was: () -> Integer?
+
+    def user_id_before_last_save: () -> Integer?
+
+    def user_id_change_to_be_saved: () -> Array[Integer?]?
+
+    def user_id_in_database: () -> Integer?
+
+    def saved_change_to_user_id: () -> Array[Integer?]?
+
+    def saved_change_to_user_id?: () -> bool
+
+    def will_save_change_to_user_id?: () -> bool
+
+    def restore_user_id!: () -> void
+
+    def clear_user_id_change: () -> void
+
+    def timestamp: () -> untyped
+
+    def timestamp=: (untyped) -> untyped
+
+    def timestamp?: () -> bool
+
+    def timestamp_changed?: () -> bool
+
+    def timestamp_change: () -> [ untyped?, untyped? ]
+
+    def timestamp_will_change!: () -> void
+
+    def timestamp_was: () -> untyped?
+
+    def timestamp_previously_changed?: () -> bool
+
+    def timestamp_previous_change: () -> Array[untyped?]?
+
+    def timestamp_previously_was: () -> untyped?
+
+    def timestamp_before_last_save: () -> untyped?
+
+    def timestamp_change_to_be_saved: () -> Array[untyped?]?
+
+    def timestamp_in_database: () -> untyped?
+
+    def saved_change_to_timestamp: () -> Array[untyped?]?
+
+    def saved_change_to_timestamp?: () -> bool
+
+    def will_save_change_to_timestamp?: () -> bool
+
+    def restore_timestamp!: () -> void
+
+    def clear_timestamp_change: () -> void
+
+    def action: () -> String
+
+    def action=: (String) -> String
+
+    def action?: () -> bool
+
+    def action_changed?: () -> bool
+
+    def action_change: () -> [ String?, String? ]
+
+    def action_will_change!: () -> void
+
+    def action_was: () -> String?
+
+    def action_previously_changed?: () -> bool
+
+    def action_previous_change: () -> Array[String?]?
+
+    def action_previously_was: () -> String?
+
+    def action_before_last_save: () -> String?
+
+    def action_change_to_be_saved: () -> Array[String?]?
+
+    def action_in_database: () -> String?
+
+    def saved_change_to_action: () -> Array[String?]?
+
+    def saved_change_to_action?: () -> bool
+
+    def will_save_change_to_action?: () -> bool
+
+    def restore_action!: () -> void
+
+    def clear_action_change: () -> void
+
+    def severity: () -> Integer
+
+    def severity=: (Integer) -> Integer
+
+    def severity?: () -> bool
+
+    def severity_changed?: () -> bool
+
+    def severity_change: () -> [ Integer?, Integer? ]
+
+    def severity_will_change!: () -> void
+
+    def severity_was: () -> Integer?
+
+    def severity_previously_changed?: () -> bool
+
+    def severity_previous_change: () -> Array[Integer?]?
+
+    def severity_previously_was: () -> Integer?
+
+    def severity_before_last_save: () -> Integer?
+
+    def severity_change_to_be_saved: () -> Array[Integer?]?
+
+    def severity_in_database: () -> Integer?
+
+    def saved_change_to_severity: () -> Array[Integer?]?
+
+    def saved_change_to_severity?: () -> bool
+
+    def will_save_change_to_severity?: () -> bool
+
+    def restore_severity!: () -> void
+
+    def clear_severity_change: () -> void
+
+    def data: () -> untyped?
+
+    def data=: (untyped?) -> untyped?
+
+    def data?: () -> bool
+
+    def data_changed?: () -> bool
+
+    def data_change: () -> [ untyped?, untyped? ]
+
+    def data_will_change!: () -> void
+
+    def data_was: () -> untyped?
+
+    def data_previously_changed?: () -> bool
+
+    def data_previous_change: () -> Array[untyped?]?
+
+    def data_previously_was: () -> untyped?
+
+    def data_before_last_save: () -> untyped?
+
+    def data_change_to_be_saved: () -> Array[untyped?]?
+
+    def data_in_database: () -> untyped?
+
+    def saved_change_to_data: () -> Array[untyped?]?
+
+    def saved_change_to_data?: () -> bool
+
+    def will_save_change_to_data?: () -> bool
+
+    def restore_data!: () -> void
+
+    def clear_data_change: () -> void
+  end
+  include GeneratedAttributeMethods
+
+  def created_by: () -> User
+  def created_by=: (User?) -> User?
+  def reload_created_by: () -> User?
+  def build_created_by: (untyped) -> User
+  def create_created_by: (untyped) -> User
+  def create_created_by!: (untyped) -> User
+  def updated_by: () -> User
+  def updated_by=: (User?) -> User?
+  def reload_updated_by: () -> User?
+  def build_updated_by: (untyped) -> User
+  def create_updated_by: (untyped) -> User
+  def create_updated_by!: (untyped) -> User
+  def user: () -> User
+  def user=: (User?) -> User?
+  def reload_user: () -> User?
+  def build_user: (untyped) -> User
+  def create_user: (untyped) -> User
+  def create_user!: (untyped) -> User
+  module GeneratedAssociationMethods
+  end
+  include GeneratedAssociationMethods
+
+  def action_get!: () -> bool
+  def action_get?: () -> bool
+  def action_post!: () -> bool
+  def action_post?: () -> bool
+  def action_puts!: () -> bool
+  def action_puts?: () -> bool
+  def action_patch!: () -> bool
+  def action_patch?: () -> bool
+  def action_delete!: () -> bool
+  def action_delete?: () -> bool
+  def action_audit!: () -> bool
+  def action_audit?: () -> bool
+  def self.action_get: () -> ActiveRecord_Relation
+  def self.action_post: () -> ActiveRecord_Relation
+  def self.action_puts: () -> ActiveRecord_Relation
+  def self.action_patch: () -> ActiveRecord_Relation
+  def self.action_delete: () -> ActiveRecord_Relation
+  def self.action_audit: () -> ActiveRecord_Relation
+
+  module GeneratedRelationMethods
+    def action_get: () -> ActiveRecord_Relation
+
+    def action_post: () -> ActiveRecord_Relation
+
+    def action_puts: () -> ActiveRecord_Relation
+
+    def action_patch: () -> ActiveRecord_Relation
+
+    def action_delete: () -> ActiveRecord_Relation
+
+    def action_audit: () -> ActiveRecord_Relation
+  end
+
+  class ActiveRecord_Relation < ::ActiveRecord::Relation
+    include GeneratedRelationMethods
+    include _ActiveRecord_Relation[UserAction, top]
+    include Enumerable[UserAction]
+  end
+
+  class ActiveRecord_Associations_CollectionProxy < ::ActiveRecord::Associations::CollectionProxy
+    include GeneratedRelationMethods
+    include _ActiveRecord_Relation[UserAction, top]
+  end
+end

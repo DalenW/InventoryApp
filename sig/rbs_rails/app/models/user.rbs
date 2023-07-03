@@ -799,6 +799,10 @@ class User < ::ApplicationRecord
   def audit_models=: (AuditModel::ActiveRecord_Associations_CollectionProxy | Array[AuditModel]) -> (AuditModel::ActiveRecord_Associations_CollectionProxy | Array[AuditModel])
   def audit_model_ids: () -> Array[Integer]
   def audit_model_ids=: (Array[Integer]) -> Array[Integer]
+  def user_actions: () -> UserAction::ActiveRecord_Associations_CollectionProxy
+  def user_actions=: (UserAction::ActiveRecord_Associations_CollectionProxy | Array[UserAction]) -> (UserAction::ActiveRecord_Associations_CollectionProxy | Array[UserAction])
+  def user_action_ids: () -> Array[Integer]
+  def user_action_ids=: (Array[Integer]) -> Array[Integer]
 
   def created_by: () -> User
   def created_by=: (User?) -> User?
