@@ -6,14 +6,14 @@ class CreateUserActions < ActiveRecord::Migration[7.0]
 
       # team id should go here
 
-      t.integer :action, null: false, limit: 1
-      t.integer :severity, null: false, limit: 1
+      t.integer :action, null: false, limit: 1, index: true
+      t.integer :severity, null: false, limit: 1, index: true
+      t.inet :ip_address, index: true
+      t.integer :response_code, limit: 2
 
       t.jsonb :data
 
       t.index [:user_id, :timestamp], unique: true
-      t.index :action
-      t.index :severity
     end
   end
 

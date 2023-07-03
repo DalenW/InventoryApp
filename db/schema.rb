@@ -34,8 +34,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_03_041000) do
     t.timestamptz "timestamp", null: false
     t.integer "action", limit: 2, null: false
     t.integer "severity", limit: 2, null: false
+    t.inet "ip_address"
+    t.integer "response_code", limit: 2
     t.jsonb "data"
     t.index ["action"], name: "index_user_actions_on_action"
+    t.index ["ip_address"], name: "index_user_actions_on_ip_address"
     t.index ["severity"], name: "index_user_actions_on_severity"
     t.index ["timestamp"], name: "user_actions_timestamp_idx", order: :desc
     t.index ["user_id", "timestamp"], name: "index_user_actions_on_user_id_and_timestamp", unique: true

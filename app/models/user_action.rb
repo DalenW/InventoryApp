@@ -34,6 +34,7 @@ class UserAction < ApplicationRecord
   validates :timestamp, presence: true
   validates :severity, presence: true
 
+
   ### METHODS ###
   # ====================================================================================================================
 

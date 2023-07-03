@@ -1,0 +1,8 @@
+class ApplicationController
+  FILTERED_PARAMS: Array[string]
+
+  @action_severity: Symbol
+  @start_time: Time
+
+  def audit_user_action: -> void
+end

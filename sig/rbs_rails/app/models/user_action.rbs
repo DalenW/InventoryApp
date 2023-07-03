@@ -146,6 +146,78 @@ class UserAction < ::ApplicationRecord
 
     def clear_severity_change: () -> void
 
+    def ip_address: () -> IPAddr?
+
+    def ip_address=: (IPAddr?) -> IPAddr?
+
+    def ip_address?: () -> bool
+
+    def ip_address_changed?: () -> bool
+
+    def ip_address_change: () -> [ IPAddr?, IPAddr? ]
+
+    def ip_address_will_change!: () -> void
+
+    def ip_address_was: () -> IPAddr?
+
+    def ip_address_previously_changed?: () -> bool
+
+    def ip_address_previous_change: () -> Array[IPAddr?]?
+
+    def ip_address_previously_was: () -> IPAddr?
+
+    def ip_address_before_last_save: () -> IPAddr?
+
+    def ip_address_change_to_be_saved: () -> Array[IPAddr?]?
+
+    def ip_address_in_database: () -> IPAddr?
+
+    def saved_change_to_ip_address: () -> Array[IPAddr?]?
+
+    def saved_change_to_ip_address?: () -> bool
+
+    def will_save_change_to_ip_address?: () -> bool
+
+    def restore_ip_address!: () -> void
+
+    def clear_ip_address_change: () -> void
+
+    def response_code: () -> Integer?
+
+    def response_code=: (Integer?) -> Integer?
+
+    def response_code?: () -> bool
+
+    def response_code_changed?: () -> bool
+
+    def response_code_change: () -> [ Integer?, Integer? ]
+
+    def response_code_will_change!: () -> void
+
+    def response_code_was: () -> Integer?
+
+    def response_code_previously_changed?: () -> bool
+
+    def response_code_previous_change: () -> Array[Integer?]?
+
+    def response_code_previously_was: () -> Integer?
+
+    def response_code_before_last_save: () -> Integer?
+
+    def response_code_change_to_be_saved: () -> Array[Integer?]?
+
+    def response_code_in_database: () -> Integer?
+
+    def saved_change_to_response_code: () -> Array[Integer?]?
+
+    def saved_change_to_response_code?: () -> bool
+
+    def will_save_change_to_response_code?: () -> bool
+
+    def restore_response_code!: () -> void
+
+    def clear_response_code_change: () -> void
+
     def data: () -> untyped?
 
     def data=: (untyped?) -> untyped?
