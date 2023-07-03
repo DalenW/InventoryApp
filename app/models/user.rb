@@ -10,4 +10,11 @@ class User < ApplicationRecord
          :lockable,
          :timeoutable,
          :trackable
+
+  ### METHODS ###
+  # ====================================================================================================================
+
+  def display_name
+    email | "User #{id}"
+  end
 end

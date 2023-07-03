@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/mrdev023/rbs_rails.git
+  revision: ac81ec7d89c432dcdd7fbf943bbee4beadab14f2
+  branch: master
+  specs:
+    rbs_rails (0.11.0)
+      parser
+      rbs (>= 1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -68,6 +77,7 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.4)
       public_suffix (>= 2.0.2, < 6.0)
+    ast (2.4.2)
     bcrypt (3.1.19)
     bindex (0.8.1)
     bootsnap (1.16.0)
@@ -137,6 +147,9 @@ GEM
     nokogiri (1.15.2-arm64-darwin)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    parser (3.2.2.3)
+      ast (~> 2.4.1)
+      racc
     pg (1.5.3)
     public_suffix (5.0.1)
     puma (5.6.6)
@@ -174,6 +187,7 @@ GEM
       thor (~> 1.0)
       zeitwerk (~> 2.5)
     rake (13.0.6)
+    rbs (3.1.0)
     redis (4.8.1)
     regexp_parser (2.8.1)
     reline (0.3.5)
@@ -237,6 +251,7 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.6)
+  rbs_rails!
   redis (~> 4.0)
   selenium-webdriver
   sprockets-rails
