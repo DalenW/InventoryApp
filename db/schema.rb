@@ -10,10 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_02_224720) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_03_012828) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "timescaledb"
+
+  create_table "audit_models", id: false, force: :cascade do |t|
+    t.string "auditable_type", null: false
+    t.bigint "auditable_id", null: false
+    t.timestamptz "audit_timestamp", null: false
+    t.text "audit_column", null: false
+    t.text "audit_data"
+    t.integer "action", limit: 2, null: false
+    t.integer "severity", limit: 2, null: false
+    t.bigint "user_id", null: false
+    t.index ["auditable_type", "auditable_id", "audit_timestamp", "audit_column"], name: "index_audit_models_on_auditable_and_timestamp_and_column", unique: true
+    t.index ["user_id"], name: "index_audit_models_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -41,4 +54,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_02_224720) do
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
 
+  add_foreign_key "audit_models", "users"
 end
