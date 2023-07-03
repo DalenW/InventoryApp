@@ -1,9 +1,14 @@
 class AuditModelHypertable < ActiveRecord::Migration[7.0]
   def up
-    execute "SELECT create_hypertable('audit_models', 'audit_timestamp');"
+    execute <<-SQL
+      SELECT create_hypertable('audit_models', 'audit_timestamp');
+    SQL
   end
 
   def down
-    execute "DROP TABLE audit_models;"
+    # drop the table
+    execute <<-SQL
+      DROP TABLE audit_models;
+    SQL
   end
 end

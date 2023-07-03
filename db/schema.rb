@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_03_020527) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_03_041000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "timescaledb"
@@ -27,6 +27,19 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_03_020527) do
     t.index ["audit_timestamp"], name: "audit_models_audit_timestamp_idx", order: :desc
     t.index ["auditable_type", "auditable_id", "audit_timestamp", "audit_column"], name: "index_audit_models_on_auditable_and_timestamp_and_column", unique: true
     t.index ["user_id"], name: "index_audit_models_on_user_id"
+  end
+
+  create_table "user_actions", id: false, force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.timestamptz "timestamp", null: false
+    t.integer "action", limit: 2, null: false
+    t.integer "severity", limit: 2, null: false
+    t.jsonb "data"
+    t.index ["action"], name: "index_user_actions_on_action"
+    t.index ["severity"], name: "index_user_actions_on_severity"
+    t.index ["timestamp"], name: "user_actions_timestamp_idx", order: :desc
+    t.index ["user_id", "timestamp"], name: "index_user_actions_on_user_id_and_timestamp", unique: true
+    t.index ["user_id"], name: "index_user_actions_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -60,6 +73,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_03_020527) do
   end
 
   add_foreign_key "audit_models", "users"
+  add_foreign_key "user_actions", "users"
   add_foreign_key "users", "users", column: "created_by_id"
   add_foreign_key "users", "users", column: "updated_by_id"
 end
