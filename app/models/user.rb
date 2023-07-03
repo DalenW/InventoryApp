@@ -10,4 +10,17 @@ class User < ApplicationRecord
          :lockable,
          :timeoutable,
          :trackable
+
+  ### ASSOCIATIONS ###
+  # ======================================================================================================================
+
+  has_many :audit_models, as: :auditable
+  has_many :user_actions
+
+  ### METHODS ###
+  # ====================================================================================================================
+
+  def display_name
+    email | "User #{id}"
+  end
 end

@@ -1,0 +1,357 @@
+class AuditModel < ::ApplicationRecord
+  extend _ActiveRecord_Relation_ClassMethods[AuditModel, ActiveRecord_Relation, top]
+
+  module GeneratedAttributeMethods
+    def auditable_type: () -> String
+
+    def auditable_type=: (String) -> String
+
+    def auditable_type?: () -> bool
+
+    def auditable_type_changed?: () -> bool
+
+    def auditable_type_change: () -> [ String?, String? ]
+
+    def auditable_type_will_change!: () -> void
+
+    def auditable_type_was: () -> String?
+
+    def auditable_type_previously_changed?: () -> bool
+
+    def auditable_type_previous_change: () -> Array[String?]?
+
+    def auditable_type_previously_was: () -> String?
+
+    def auditable_type_before_last_save: () -> String?
+
+    def auditable_type_change_to_be_saved: () -> Array[String?]?
+
+    def auditable_type_in_database: () -> String?
+
+    def saved_change_to_auditable_type: () -> Array[String?]?
+
+    def saved_change_to_auditable_type?: () -> bool
+
+    def will_save_change_to_auditable_type?: () -> bool
+
+    def restore_auditable_type!: () -> void
+
+    def clear_auditable_type_change: () -> void
+
+    def auditable_id: () -> Integer
+
+    def auditable_id=: (Integer) -> Integer
+
+    def auditable_id?: () -> bool
+
+    def auditable_id_changed?: () -> bool
+
+    def auditable_id_change: () -> [ Integer?, Integer? ]
+
+    def auditable_id_will_change!: () -> void
+
+    def auditable_id_was: () -> Integer?
+
+    def auditable_id_previously_changed?: () -> bool
+
+    def auditable_id_previous_change: () -> Array[Integer?]?
+
+    def auditable_id_previously_was: () -> Integer?
+
+    def auditable_id_before_last_save: () -> Integer?
+
+    def auditable_id_change_to_be_saved: () -> Array[Integer?]?
+
+    def auditable_id_in_database: () -> Integer?
+
+    def saved_change_to_auditable_id: () -> Array[Integer?]?
+
+    def saved_change_to_auditable_id?: () -> bool
+
+    def will_save_change_to_auditable_id?: () -> bool
+
+    def restore_auditable_id!: () -> void
+
+    def clear_auditable_id_change: () -> void
+
+    def audit_timestamp: () -> untyped
+
+    def audit_timestamp=: (untyped) -> untyped
+
+    def audit_timestamp?: () -> bool
+
+    def audit_timestamp_changed?: () -> bool
+
+    def audit_timestamp_change: () -> [ untyped?, untyped? ]
+
+    def audit_timestamp_will_change!: () -> void
+
+    def audit_timestamp_was: () -> untyped?
+
+    def audit_timestamp_previously_changed?: () -> bool
+
+    def audit_timestamp_previous_change: () -> Array[untyped?]?
+
+    def audit_timestamp_previously_was: () -> untyped?
+
+    def audit_timestamp_before_last_save: () -> untyped?
+
+    def audit_timestamp_change_to_be_saved: () -> Array[untyped?]?
+
+    def audit_timestamp_in_database: () -> untyped?
+
+    def saved_change_to_audit_timestamp: () -> Array[untyped?]?
+
+    def saved_change_to_audit_timestamp?: () -> bool
+
+    def will_save_change_to_audit_timestamp?: () -> bool
+
+    def restore_audit_timestamp!: () -> void
+
+    def clear_audit_timestamp_change: () -> void
+
+    def audit_column: () -> String
+
+    def audit_column=: (String) -> String
+
+    def audit_column?: () -> bool
+
+    def audit_column_changed?: () -> bool
+
+    def audit_column_change: () -> [ String?, String? ]
+
+    def audit_column_will_change!: () -> void
+
+    def audit_column_was: () -> String?
+
+    def audit_column_previously_changed?: () -> bool
+
+    def audit_column_previous_change: () -> Array[String?]?
+
+    def audit_column_previously_was: () -> String?
+
+    def audit_column_before_last_save: () -> String?
+
+    def audit_column_change_to_be_saved: () -> Array[String?]?
+
+    def audit_column_in_database: () -> String?
+
+    def saved_change_to_audit_column: () -> Array[String?]?
+
+    def saved_change_to_audit_column?: () -> bool
+
+    def will_save_change_to_audit_column?: () -> bool
+
+    def restore_audit_column!: () -> void
+
+    def clear_audit_column_change: () -> void
+
+    def audit_data: () -> String?
+
+    def audit_data=: (String?) -> String?
+
+    def audit_data?: () -> bool
+
+    def audit_data_changed?: () -> bool
+
+    def audit_data_change: () -> [ String?, String? ]
+
+    def audit_data_will_change!: () -> void
+
+    def audit_data_was: () -> String?
+
+    def audit_data_previously_changed?: () -> bool
+
+    def audit_data_previous_change: () -> Array[String?]?
+
+    def audit_data_previously_was: () -> String?
+
+    def audit_data_before_last_save: () -> String?
+
+    def audit_data_change_to_be_saved: () -> Array[String?]?
+
+    def audit_data_in_database: () -> String?
+
+    def saved_change_to_audit_data: () -> Array[String?]?
+
+    def saved_change_to_audit_data?: () -> bool
+
+    def will_save_change_to_audit_data?: () -> bool
+
+    def restore_audit_data!: () -> void
+
+    def clear_audit_data_change: () -> void
+
+    def action: () -> String
+
+    def action=: (String) -> String
+
+    def action?: () -> bool
+
+    def action_changed?: () -> bool
+
+    def action_change: () -> [ String?, String? ]
+
+    def action_will_change!: () -> void
+
+    def action_was: () -> String?
+
+    def action_previously_changed?: () -> bool
+
+    def action_previous_change: () -> Array[String?]?
+
+    def action_previously_was: () -> String?
+
+    def action_before_last_save: () -> String?
+
+    def action_change_to_be_saved: () -> Array[String?]?
+
+    def action_in_database: () -> String?
+
+    def saved_change_to_action: () -> Array[String?]?
+
+    def saved_change_to_action?: () -> bool
+
+    def will_save_change_to_action?: () -> bool
+
+    def restore_action!: () -> void
+
+    def clear_action_change: () -> void
+
+    def severity: () -> String
+
+    def severity=: (String) -> String
+
+    def severity?: () -> bool
+
+    def severity_changed?: () -> bool
+
+    def severity_change: () -> [ String?, String? ]
+
+    def severity_will_change!: () -> void
+
+    def severity_was: () -> String?
+
+    def severity_previously_changed?: () -> bool
+
+    def severity_previous_change: () -> Array[String?]?
+
+    def severity_previously_was: () -> String?
+
+    def severity_before_last_save: () -> String?
+
+    def severity_change_to_be_saved: () -> Array[String?]?
+
+    def severity_in_database: () -> String?
+
+    def saved_change_to_severity: () -> Array[String?]?
+
+    def saved_change_to_severity?: () -> bool
+
+    def will_save_change_to_severity?: () -> bool
+
+    def restore_severity!: () -> void
+
+    def clear_severity_change: () -> void
+
+    def user_id: () -> Integer
+
+    def user_id=: (Integer) -> Integer
+
+    def user_id?: () -> bool
+
+    def user_id_changed?: () -> bool
+
+    def user_id_change: () -> [ Integer?, Integer? ]
+
+    def user_id_will_change!: () -> void
+
+    def user_id_was: () -> Integer?
+
+    def user_id_previously_changed?: () -> bool
+
+    def user_id_previous_change: () -> Array[Integer?]?
+
+    def user_id_previously_was: () -> Integer?
+
+    def user_id_before_last_save: () -> Integer?
+
+    def user_id_change_to_be_saved: () -> Array[Integer?]?
+
+    def user_id_in_database: () -> Integer?
+
+    def saved_change_to_user_id: () -> Array[Integer?]?
+
+    def saved_change_to_user_id?: () -> bool
+
+    def will_save_change_to_user_id?: () -> bool
+
+    def restore_user_id!: () -> void
+
+    def clear_user_id_change: () -> void
+  end
+  include GeneratedAttributeMethods
+
+  def created_by: () -> User
+  def created_by=: (User?) -> User?
+  def reload_created_by: () -> User?
+  def build_created_by: (untyped) -> User
+  def create_created_by: (untyped) -> User
+  def create_created_by!: (untyped) -> User
+  def updated_by: () -> User
+  def updated_by=: (User?) -> User?
+  def reload_updated_by: () -> User?
+  def build_updated_by: (untyped) -> User
+  def create_updated_by: (untyped) -> User
+  def create_updated_by!: (untyped) -> User
+  def auditable: () -> untyped
+  def auditable=: (untyped?) -> untyped?
+  def reload_auditable: () -> untyped?
+  module GeneratedAssociationMethods
+  end
+  include GeneratedAssociationMethods
+
+  def action_create!: () -> bool
+  def action_create?: () -> bool
+  def action_update!: () -> bool
+  def action_update?: () -> bool
+  def action_destroy!: () -> bool
+  def action_destroy?: () -> bool
+  def info!: () -> bool
+  def info?: () -> bool
+  def warning!: () -> bool
+  def warning?: () -> bool
+  def dangerous!: () -> bool
+  def dangerous?: () -> bool
+  def self.action_create: () -> ActiveRecord_Relation
+  def self.action_update: () -> ActiveRecord_Relation
+  def self.action_destroy: () -> ActiveRecord_Relation
+  def self.info: () -> ActiveRecord_Relation
+  def self.warning: () -> ActiveRecord_Relation
+  def self.dangerous: () -> ActiveRecord_Relation
+
+  module GeneratedRelationMethods
+    def action_create: () -> ActiveRecord_Relation
+
+    def action_update: () -> ActiveRecord_Relation
+
+    def action_destroy: () -> ActiveRecord_Relation
+
+    def info: () -> ActiveRecord_Relation
+
+    def warning: () -> ActiveRecord_Relation
+
+    def dangerous: () -> ActiveRecord_Relation
+  end
+
+  class ActiveRecord_Relation < ::ActiveRecord::Relation
+    include GeneratedRelationMethods
+    include _ActiveRecord_Relation[AuditModel, top]
+    include Enumerable[AuditModel]
+  end
+
+  class ActiveRecord_Associations_CollectionProxy < ::ActiveRecord::Associations::CollectionProxy
+    include GeneratedRelationMethods
+    include _ActiveRecord_Relation[AuditModel, top]
+  end
+end

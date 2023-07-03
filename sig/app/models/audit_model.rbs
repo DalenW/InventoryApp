@@ -1,0 +1,5 @@
+class AuditModel
+  def previous: -> AuditModel?
+
+  def record_was: -> AuditModel?
+end

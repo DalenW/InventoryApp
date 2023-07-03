@@ -31,3 +31,4 @@
 /config/master.key
 .idea
 config/application.yml
+.gem_rbs_collection
