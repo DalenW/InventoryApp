@@ -52,8 +52,8 @@ class ApplicationController < ActionController::Base
 
     data[:end_time] = end_time.strftime("%Y-%m-%dT%H:%M:%S.%L%z")
 
-    @action_duration = (end_time - @start_time) * 1000
-    data[:duration] = @action_duration
+    action_duration = (end_time - @start_time) * 1000
+    data[:duration] = action_duration
 
     Thread.new do
       begin
